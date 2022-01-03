@@ -7,6 +7,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+/* ClassLoader hierarchy:
+ *
+ * Bootstrap CL
+ * Platform CL
+ * System CL
+ * Custom CLs
+ */
 public class SimpleClassLoader extends ClassLoader {
   private Map<String, Class<?>> loadedClasses = new HashMap<>();
   private Set<String> resolvedClasses = new HashSet<>();
